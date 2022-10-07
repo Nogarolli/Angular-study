@@ -1,0 +1,32 @@
+<div style="display: flex; flex-direction: row; justify-content: space-between">
+  <div>
+    <label>Login:</label>
+    <label>{{ usuarioIn }}</label>
+  </div>
+  <div style="float: right">
+    <label (click)="logout()">logout</label>
+  </div>
+</div>
+<div style="margin: auto; text-align: center">
+  <h1>DASHBOARD</h1>
+  <button class="botaoDash" (click)="goToCadastroUsuario()">
+    Ir para cadastro
+  </button>
+  <button class="botaoDash">Cadastrar uma receita</button>
+  <div style="display: flex; flex-direction: column">
+    <ul
+      *ngFor="let item of items"
+      style="display: flex; list-style: none; margin: auto"
+    >
+      <li style="margin: auto">
+        <img
+          style="height: 100px; width: 100px; margin: 20px"
+          src="{{ item.imagePath }}"
+        />
+      </li>
+      <li style="margin: auto">
+        <label>{{ item.name }}</label>
+      </li>
+    </ul>
+  </div>
+</div>

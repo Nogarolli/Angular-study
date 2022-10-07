@@ -1,0 +1,24 @@
+<div class="teste" style="display: flex; flex-direction: column">
+  <div class="loginBox">
+    <h1>Login</h1>
+    <label>Login</label>
+    <input type="text" class="inputLogin" [(ngModel)]="usuario"/>
+    <label>Senha</label>
+    <input type="password" class="inputLogin" [(ngModel)]="senha" />
+    <div style="display: flex; flex-direction:row">
+      <input 
+        id='manterLogado' 
+        type="checkbox" 
+        value="manterLogado" 
+        [(ngModel)]="manterLogado"  
+      /> 
+      <label for="manterLogado">Manter conectado</label>
+    </div>
+    <button class="botaoLogin" (click)="logar()">Logar</button>
+  </div>
+  <div style="display: flex; flex-direction: column">
+    <h3>Credenciais</h3>
+    <label>Overwatch</label>
+    <label>gameoftheyear</label>
+  </div>
+</div>
